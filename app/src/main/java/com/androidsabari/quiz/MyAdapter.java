@@ -12,22 +12,22 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 public class MyAdapter extends BaseAdapter {
-	
-	 Context c = null;
+
+	Context c = null;
 	ArrayList list;
 	LayoutInflater inflater;
 	//Button Btn;
 	ImageView image;
-	
-	
+
+
 	public MyAdapter(Context c,ArrayList<TopicNames> topicsList){
-		
+
 		this.list=topicsList;
 		inflater=LayoutInflater.from(c);
 		this.c=c;
-		
+
 	}
-	
+
 	@Override
 	public int getCount() {
 		return list.size();
@@ -43,37 +43,37 @@ public class MyAdapter extends BaseAdapter {
 	}
 	@Override
 	public View getView(final int pos, View arg1, ViewGroup arg2) {
-		
+
 		View v=inflater.inflate(R.layout.item,arg2,false);
 		Button Btn;
 		Btn = (Button) v.findViewById(R.id.submit);
 		image = (ImageView)v.findViewById(R.id.imageView1);
-		
+
 		TopicNames topicName = (TopicNames) list.get(pos);
-		
+
 		Btn.setText(topicName.getTopicName());
 		image.setImageResource(Topics.images[pos]);
 //		Topics obj;
 //		obj = new Topics();
 //		String topic = obj.getList(pos);
-	
-		
-		
+
+
+
 		Btn.setOnClickListener(new View.OnClickListener() {
-			
+
 			@Override
 			public void onClick(View arg0) {
 
-					Intent i = new Intent(c,QuizActivity.class);
-					 Bundle bundle = new Bundle();
-			    	  bundle.putInt("topic1",pos+1);
-			    	  i.putExtras(bundle);
-					c.startActivity(i);
-				
+				Intent i = new Intent(c,QuizActivity.class);
+				Bundle bundle = new Bundle();
+				bundle.putInt("topic1",pos+1);
+				i.putExtras(bundle);
+				c.startActivity(i);
+
 			}
 		});
 		return v;
 	};
-	
+
 
 }
