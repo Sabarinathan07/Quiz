@@ -6,12 +6,20 @@
     android:layout_height="match_parent"
     tools:context=".Topics">
 
+    <Button
+        android:id="@+id/view_scorecard_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="View Scoreboard"
+        ></Button>
+
     <ListView
         android:id="@+id/lv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_below="@+id/view_scorecard_btn"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" >
-    </ListView>
+        android:layout_centerHorizontal="true"></ListView>
 
 </RelativeLayout>

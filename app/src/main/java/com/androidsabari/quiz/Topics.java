@@ -12,6 +12,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -25,6 +27,7 @@ public class Topics extends Activity implements OnTopicsRetrievedListener  {
     ArrayList<TopicNames> list = new ArrayList<TopicNames>();
     MyAdapter adapter;
     TeacherAdapter teacherAdapter;
+    Button view_scoreboard;
     //private RequestQueue mQueue;
     ArrayList<TopicNames> topicsList;
 
@@ -35,6 +38,7 @@ public class Topics extends Activity implements OnTopicsRetrievedListener  {
 
         setContentView(R.layout.activity_topics);
         listView = (ListView) findViewById(R.id.lv);
+        view_scoreboard = findViewById(R.id.view_scorecard_btn);
         topicsList = new ArrayList<TopicNames>();
 
         //mQueue = Volley.newRequestQueue(this);
@@ -42,6 +46,19 @@ public class Topics extends Activity implements OnTopicsRetrievedListener  {
         int teacher = bundle.getInt("teacher");
 
         selectTopics(teacher);
+
+        view_scoreboard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getBaseContext(),Topics.class);
+                Bundle bundle = new Bundle();
+                bundle.putInt("teacher",1);
+                i.putExtras(bundle);
+                startActivity(i);
+            }
+        });
+
+
 
 
 //		list.add(new TopicNames("Mahabharatham"));
@@ -147,6 +164,7 @@ public class Topics extends Activity implements OnTopicsRetrievedListener  {
 
         int teacherId = teacher;
         if(teacherId==1){
+            view_scoreboard.setText("Select the topic to view score");
             TeacherAdapter teacherAdapter = new TeacherAdapter(Topics.this,topicsList);
             listView.setAdapter(teacherAdapter);
 
