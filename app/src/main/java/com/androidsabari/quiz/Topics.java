@@ -153,7 +153,8 @@ public class Topics extends Activity implements OnTopicsRetrievedListener  {
 
         }else{
 
-
+//            TeacherAdapter teacherAdapter = new TeacherAdapter(Topics.this,topicsList);
+//            listView.setAdapter(teacherAdapter);
 
             MyAdapter adapter = new MyAdapter(Topics.this,topicsList);
             listView.setAdapter(adapter);

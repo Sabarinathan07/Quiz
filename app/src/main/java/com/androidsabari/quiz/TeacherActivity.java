@@ -40,6 +40,7 @@ public class TeacherActivity extends Activity implements OnClickListener {
         login=(Button)findViewById(R.id.tLogin);
 
         progressDialog = new ProgressDialog(this);
+        progressDialog.setMessage("Please wait...");
 
         login.setOnClickListener(this);
 
@@ -50,7 +51,7 @@ public class TeacherActivity extends Activity implements OnClickListener {
         final String sName = name.getText().toString().trim();
         final String sPassword = password.getText().toString().trim();
 
-        progressDialog.setMessage("Please wait....");
+
         progressDialog.show();
 
         StringRequest stringRequest = new StringRequest(Request.Method.POST,
@@ -87,7 +88,7 @@ public class TeacherActivity extends Activity implements OnClickListener {
                     @Override
                     public void onErrorResponse(VolleyError error){
                         progressDialog.hide();
-                        Toast.makeText(getApplicationContext(), error.getMessage(), Toast.LENGTH_LONG).show() ;
+                        Toast.makeText(getApplicationContext(), "Error in teacher Login", Toast.LENGTH_LONG).show() ;
                     }
                 }
 
