@@ -2,7 +2,8 @@ package com.androidsabari.quiz;
 
 public class Constants {
 //    private static final String ROOT_URL = "https://online-test1234.000webhostapp.com/online_test/v1/";
-    private static final String ROOT_URL = "http://192.168.29.229/quiz/v1/";
+    private static final String ROOT_URL = "http://192.168.29.197/quiz/v1/";
+//    http://192.168.29.229/quiz/v1/
     public static final String URL_STAFF_REGISTER = ROOT_URL+"registerUser.php";
     public static final String URL_STAFF_LOGIN = ROOT_URL+"userLogin.php";
     public static final String URL_STU_REGISTER = ROOT_URL+"studentSignup.php";
