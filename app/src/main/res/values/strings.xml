@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Quiz</string>
+    <string name="student">Student</string>
+    <string name="teacher">Teacher</string>
+    <string name="are_you_a_student_or_teacher">Are you a Student or Teacher</string>
+    <string name="welcome_to_quiz_game">Welcome! to Quiz GAME!!</string>
 </resources>

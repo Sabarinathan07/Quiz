@@ -11,12 +11,12 @@
         android:id="@+id/rUsername"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/btStudent"
+        android:layout_alignStart="@+id/btStudent"
         android:layout_alignParentTop="true"
         android:layout_marginTop="32dp"
         android:gravity="center"
-        android:text="Welcome! to Sabari's Quiz GAME!!"
-        android:textColor="#000"
+        android:text="@string/welcome_to_quiz_game"
+        android:textColor="@color/dark_color"
         android:textSize="30sp"
         android:textStyle="bold" />
 
@@ -27,22 +27,22 @@
         android:layout_above="@+id/btTeacher"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="21dp"
-        android:background="#34A853"
-        android:text="Student"
-        android:textColor="#fff"
+        android:background="@color/secondary_color"
+        android:text="@string/student"
+        android:textColor="@color/dark_color"
         android:textStyle="bold" />
 
     <Button
         android:id="@+id/btTeacher"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/btStudent"
+        android:layout_alignStart="@+id/btStudent"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="46dp"
-        android:background="#EA4335"
-        android:text="Teacher"
-        android:textColor="#fff"
-        android:textStyle="bold"/>
+        android:background="@color/secondary_color"
+        android:text="@string/teacher"
+        android:textColor="@color/dark_color"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/rScore"
@@ -51,10 +51,10 @@
         android:layout_above="@+id/btStudent"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="14dp"
-        android:text="Are you a Student or Teacher"
+        android:text="@string/are_you_a_student_or_teacher"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="#000000"
-        android:textSize="16sp" />
+        android:textSize="18sp" />
 
 
 </RelativeLayout>
